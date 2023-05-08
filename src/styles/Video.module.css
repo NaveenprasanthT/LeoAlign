@@ -1,0 +1,53 @@
+.wrapSection {
+    padding: 2% 0%;
+}
+
+.head {
+    background: var(--secondary-color);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0;
+}
+
+.head h1 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.videoSection {
+    padding: 2% 8%;
+}
+
+.videoSection h1 {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.videoCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    box-shadow: 0 0 8px;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.videoDesc {
+    text-align: center;
+    padding: 2% 0;
+    font-weight: 500;
+    font-size: 32px;
+}
+.mainVideo{
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
