@@ -9,8 +9,47 @@
     line-height: 80px;
     color: #fff;
 }
-.header h1{
+
+.header h1 {
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
+}
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    padding: 4% 8%;
+}
+
+.relative {
+    position: relative;
+    height: 300px;
+    width: 40%;
+}
+
+
+/*  */
+.scroll {
+    padding-bottom: 2%;
+}
+
+.scroll marquee {
+    font-weight: 500;
+    font-size: 48px;
+}
+.red{
+    color: var(--secondary-color);
+}
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        height: 20vh;
+    }
+    .header h1 {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+    }
 }

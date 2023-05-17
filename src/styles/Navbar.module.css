@@ -2,13 +2,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 10px;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+
 }
 
-.logo img {
-    height: 50px;
+.logo {
+    width: 20%;
 }
 
+.logoImage {
+    height: max-content;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.locationList{
+    display: none;
+}
+ .active {
+    position: absolute;
+    width: 170px;
+    top: 50px;
+    padding: 10%;
+    padding-bottom: 0;
+    font-weight: 500;
+    font-size: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.list{
+    border-bottom: 1px solid #0000002f;
+    width: 100%;
+    /* padding: 6px 0; */
+}
 .menu {
     display: flex;
     align-items: center;
@@ -27,13 +65,13 @@
 }
 
 .navItem {
-    margin-right: 1rem;
+    margin-right: 3rem;
 }
 
 .navLink {
     display: flex;
     align-items: center;
-    color: #000;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -48,13 +86,20 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    color: #fff;
-    background-color: #000;
-    border: none;
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.bookScan:hover {
+    cursor: pointer;
+    color: #fff;
+    background: var(--secondary-color);
 }
 
 .bookScanIcon {
@@ -63,6 +108,25 @@
 }
 
 @media screen and (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .logo {
+        width: 50%;
+        height: 80%;
+        object-fit: contain;
+    }
+
+    .link {
+        height: max-content;
+    }
+
+    .logoImage {
+        object-fit: contain;
+        height: 100%;
+    }
+
     .menu {
         flex-direction: column;
         align-items: flex-start;
@@ -81,7 +145,7 @@
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 4.5rem;
+        top: 60px;
         left: 0;
         width: 100%;
         padding: 1rem;
@@ -108,5 +172,6 @@
 
     .active {
         display: flex;
+        z-index: 999;
     }
 }

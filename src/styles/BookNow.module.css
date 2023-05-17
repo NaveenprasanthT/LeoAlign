@@ -1,0 +1,232 @@
+.topBanner {
+    background: var(--secondary-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0;
+    line-height: 80px;
+}
+
+.topBanner h1 {
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.secondBanner {
+    display: flex;
+}
+
+.left {
+    width: 65%;
+    background: #FFE771;
+    padding: 2% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    width: 280px;
+    height: max-content;
+}
+
+.left h2 {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.right {
+    width: 35%;
+}
+
+.img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Form section */
+
+.formSection {
+    padding: 4% 8%;
+}
+
+.content {
+    margin: 2% 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.formSectionLeft {
+    width: 40%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.formWrap {
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formLeft {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.formRight {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.formSection label {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.formSection input {
+    margin-top: 14px;
+    margin-bottom: 25px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 15px;
+    border: 2px #2f2e2e53 solid;
+}
+
+.formSection input:focus {
+    outline: none;
+}
+
+
+.formBottom {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
+.submitSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin-top: 4%;
+}
+
+.call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+.call h3{
+    margin-left: 10px;
+    
+}
+
+.submitSection input[type=submit] {
+    margin: 0;
+    border: var(--secondary-color) solid 2px;
+    color: var(--secondary-color);
+    background: transparent;
+    height: 50px;
+    padding: 0 40px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 22px;
+    transition: 0.4s ease-in-out;
+}
+
+.submitSection input[type=submit]:hover {
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+
+.submitBtn h3 {
+    margin: 0;
+}
+
+.msgSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.msgSection h1 {
+    font-weight: 700;
+    font-size: 4vw;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+
+}
+
+.msgSection .logo {
+    width: 70%;
+    opacity: .2;
+}
+
+@media screen and (max-width: 750px) {
+    .topBanner h1 {
+        font-size: 26px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .left h2 {
+        font-size: 24px;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .formWrap {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .formLeft {
+        width: 100%;
+        margin: 0;
+    }
+
+    .formRight {
+        width: 100%;
+        margin: 0;
+    }
+
+    .submitSection {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

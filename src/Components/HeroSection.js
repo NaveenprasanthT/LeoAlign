@@ -5,11 +5,13 @@ function HeroSection() {
     <div className={styles.hero}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1 className={styles.title}>Entrust your smile to the professionals</h1>
+        <h1 className={styles.title}>“Entrust your smile to the professionals”</h1>
         <form>
-          
-          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-          <button className={styles.bookScan}>Book Scan</button>
+          <div className={styles.number}>
+            <div className={styles.code} htmlFor="">+ 91</div>
+            <input  type="tel" id="phoneNumber" name="phoneNumber" required />
+          </div>
+          <input type='submit' className={styles.bookScan} value='Book Scan' />
         </form>
       </div>
     </div>

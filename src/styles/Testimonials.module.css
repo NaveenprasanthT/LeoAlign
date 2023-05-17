@@ -1,0 +1,121 @@
+.sectionWrap {
+    padding: 2% 8%;
+}
+
+.head h1 {
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.head p {
+    font-weight: 400;
+    font-size: 24px;
+}
+.logo{
+    height: 75px;
+    width: max-content;
+}
+.bestSmileLogo{
+    height: 80px;
+    width: max-content;
+}
+
+.cards {
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.cardWrap {
+    box-shadow: 0 0 10px;
+    width: 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4%;
+}
+
+.img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.designation {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.review {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 2% 6%;
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+.bestSmile {
+    margin-top: 6%;
+
+}
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    display: flex;
+}
+.contentWrap{
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+}
+.left{
+    width: 50%;
+}
+.listItem {
+    font-weight: 400;
+    font-size: 36px;
+    margin: 2% 0;
+}
+.right{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.itemImg{
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 750px) {
+    .title{
+        flex-direction: column;
+        font-size: 28px;
+        align-items: center;
+        text-align: center;
+    }
+    .contentWrap{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}

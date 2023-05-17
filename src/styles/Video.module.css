@@ -15,13 +15,20 @@
 .head h1 {
     font-weight: 500;
     font-size: 32px;
+    text-align: center;
 }
 
 .videoSection {
     padding: 2% 8%;
+    padding-top: 6%;
 }
 
-.videoSection h1 {
+.title {
+    display: flex;
+    align-items: flex-start;
+}
+
+.videoSection h2 {
     font-weight: 500;
     font-size: 48px;
 }
@@ -30,13 +37,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    row-gap: 30px;
+    margin-top: 2%;
 }
 
 .card {
-    width: 250px;
+    width: 350px;
     box-shadow: 0 0 8px;
     border-radius: 10px;
-    margin: 2%;
+}
+
+.viedo {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .videoDesc {
@@ -45,9 +59,54 @@
     font-weight: 500;
     font-size: 32px;
 }
-.mainVideo{
+
+.mainVideo {
     padding: 2% 0;
+    padding-top: 6%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.mainVideo h1 {
+    font-weight: 500;
+    font-size: 64px;
+
+}
+
+.video {
+    height: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 270px;
+    height: max-content;
+    margin-left: 10px;
+}
+
+.PathLogo {
+    width: 330px;
+    height: max-content;
+}
+
+@media screen and (max-width: 750px) {
+    .title {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title h2 {
+        font-size: 32px;
+    }
+
+    .pathTo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pathTo h1 {
+        font-size: 42px;
+    }
 }
