@@ -2,6 +2,10 @@ import React from 'react'
 import styles from '@/styles/Footer.module.css'
 import Image from 'next/image'
 import logo from '../../public/assets/logo.png'
+import IG from '../../public/assets/IG.png'
+import fb from '../../public/assets/facebook.png'
+import linkedIN from '../../public/assets/LinkedIN.png'
+import { Link } from 'react-scroll'
 
 
 const Footer = () => {
@@ -19,7 +23,12 @@ const Footer = () => {
                     <p>Privacy Policy  |  Terms and Conditions</p>
                 </div>
             </div>
-            <div className={styles.socialIcons}>Social Media</div>
+            <div className={styles.socialIcons}>
+                <a className={styles.socialIcon} href="https://www.instagram.com/leo_align/"><Image style={{ width: '100%', height: '100%' }} src={IG} alt='icons' /></a>
+
+                <a className={styles.socialIcon} href="https://www.facebook.com/profile.php?id=100093060575261&mibextid=ZbWKwL"><Image style={{ width: '100%', height: '100%' }} src={fb} alt='icons' /></a>
+
+            </div>
         </div>
     )
 }

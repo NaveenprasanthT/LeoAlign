@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: ce;
 }
 
 .mainVideo h1 {
@@ -78,7 +79,9 @@
     height: 400px;
     width: 100%;
 }
-
+.largeViedo{
+    width: 70%;
+}
 .logo {
     width: 270px;
     height: max-content;
@@ -86,8 +89,10 @@
 }
 
 .PathLogo {
-    width: 330px;
+    width: 300px;
+    margin-left: 10px;
     height: max-content;
+    transform: translateY(8%);
 }
 
 @media screen and (max-width: 750px) {
@@ -108,5 +113,8 @@
 
     .pathTo h1 {
         font-size: 42px;
+    }
+    .largeViedo{
+        width: 100%;
     }
 }

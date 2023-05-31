@@ -2,12 +2,12 @@ import React from 'react'
 import styles from '@/styles/BookNow.module.css'
 import Image from 'next/image'
 import logo from '../../public/assets/logo.png'
-import img from '../../public/assets/bookNow.png'
+import img from '../../public/assets/doctorCheckup.jpg'
 import Form from './Form'
 
 const BookNow = () => {
     return (
-        <div className={styles.BookNowWrap}>
+        <div className={styles.BookNowWrap}  >
             <div className={styles.topBanner}>
                 <h1>First time in <span style={{ color: 'var(--primary-color)' }} > INDIA</span></h1>
                 <h1>Consult your treatment planning Doctor directly </h1>
@@ -23,6 +23,7 @@ const BookNow = () => {
                     <Image className={styles.img} src={img} alt='image' />
                 </div >
             </div>
+            
             {/* Form Section */}
             <Form />
             <div className={styles.msgSection}>

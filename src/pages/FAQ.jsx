@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/FAQ.module.css'
 import Image from 'next/image'
 import banner from '../../public/assets/faqBanner.png'
+import call from '../../public/assets/call.png'
 import Faq from '@/Components/FAQ/Faq'
 import Form from '@/Components/Form'
 
@@ -25,7 +26,7 @@ export default function FAQ() {
                     <h2>Have a <span className={styles.red}>Query</span></h2>
                     <h2>Talk directly to our Professional Doctors</h2>
                     <div className={styles.call}>
-                        <Image src='' alt='callIcon' />
+                        <Image width={60} src={call} alt='callIcon' />
                         <h2><span className={styles.red}>CALL</span> 8951183999</h2>
                     </div>
                 </div>

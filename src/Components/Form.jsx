@@ -8,7 +8,7 @@ import img from '../../public/assets/faqForm.png'
 const Form = () => {
     return (
         <form action="" className={styles.formSection} >
-            <Image className={styles.logo} src={logo} alt='logo' />
+            <Image className={styles.logo} src={logo} alt='logo' id='bookNow' />
             <p className={styles.content}>Enhance your smile and confidence with state of art treatment protocols and world-class aligners. Give yourself the best gift possible….your smile….. get LEOALIGNED.</p>
             <div className={styles.formWrap}>
                 <div className={styles.formSectionLeft}>

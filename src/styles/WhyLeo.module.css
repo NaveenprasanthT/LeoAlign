@@ -100,4 +100,13 @@
         font-weight: 700;
         font-size: 22px;
     }
+    .countSection {
+        margin: 4% ;
+    }
+    .countSection h1 {
+        font-size: 5vw;
+    }
+    .countSection h2 {
+        font-size: 3vw;
+    }
 }

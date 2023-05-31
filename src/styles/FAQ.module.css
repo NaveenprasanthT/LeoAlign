@@ -42,7 +42,10 @@
 
 /* Query Section*/
 .queryWrap {
-    padding: 4% 8%;
+    padding: 8% 8%;
+    background-image: url('../../public/assets/faqDoc.png');
+    background-size: cover;
+    background-position: top right;
 }
 
 .queryWrap h2 {

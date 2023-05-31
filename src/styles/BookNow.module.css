@@ -42,8 +42,9 @@
 
 .img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
+    object-position: center bottom;
 }
 
 /* Form section */
@@ -65,6 +66,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.left {
+    width: 100%;
 }
 
 .image {
@@ -138,16 +143,17 @@
     color: #000;
     text-decoration: none;
 }
-.call h3{
+
+.call h3 {
     margin-left: 10px;
-    
+
 }
 
 .submitSection input[type=submit] {
     margin: 0;
     border: var(--secondary-color) solid 2px;
-    color: var(--secondary-color);
-    background: transparent;
+    color: #fff;
+    background: var(--secondary-color);
     height: 50px;
     padding: 0 40px;
     border-radius: 6px;
@@ -158,8 +164,8 @@
 
 .submitSection input[type=submit]:hover {
     cursor: pointer;
-    background: var(--secondary-color);
-    color: #fff;
+    background: transparent;
+    color: var(--secondary-color);
 }
 
 
@@ -218,6 +224,14 @@
     .formLeft {
         width: 100%;
         margin: 0;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .formSectionLeft {
+        width: 100%;
     }
 
     .formRight {

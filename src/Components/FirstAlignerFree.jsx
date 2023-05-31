@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image';
 import styles from '@/styles/FirstAlignerFree.module.css'
-import img1 from '../../public/assets/aligner01.png'
-import img2 from '../../public/assets/aligner02.png'
-import img3 from '../../public/assets/aligner03.png'
+// import video from '../../public/assets/leoalignVideo.mp4'
 
 const FirstAlignerFree = () => {
     const content = [
@@ -25,13 +23,22 @@ const FirstAlignerFree = () => {
         }
     ];
 
-    const images = [
-        '/assets/aligner01.png',
-        '/assets/aligner02.png',
-        '/assets/aligner03.png',
-        '/assets/aligner01.png',
-        // Add more image URLs here
-    ];
+    const videoEl = useRef(null);
+
+    const attemptPlay = () => {
+        videoEl &&
+            videoEl.current &&
+            videoEl.current.play().catch((error) => {
+                console.error("Error attempting to play", error);
+            });
+    };
+
+    useEffect(() => {
+        attemptPlay();
+    }, []);
+
+
+
 
     const [activeIndex, setActiveIndex] = useState(0);
     const [currentImage, setCurrentImage] = useState(0);
@@ -42,7 +49,6 @@ const FirstAlignerFree = () => {
             setActiveIndex((activeIndex + 1) % 4);
             setFadeIn(true);
             setTimeout(() => {
-                setCurrentImage((prevImage) => (prevImage + 1) % images.length);
                 setFadeIn(false);
             }, 400); // Adjust the delay here if needed
         }, 2000);
@@ -54,11 +60,7 @@ const FirstAlignerFree = () => {
     return (
         <>
             <style jsx>{`
-        .container {
-            display: flex;
-            flex-direction: column;
-            width: 60%;
-        }
+        
 
         .content {
             opacity: 0.1;
@@ -87,8 +89,8 @@ const FirstAlignerFree = () => {
                 <h1>Get Your <span style={{ color: 'var(--primary-color)' }}>FIRST ALIGNER</span> For Free</h1>
             </div>
 
-            {/* <div className={styles.mainContent}>
-                <div className="container" >
+            <div className={styles.mainContent}>
+                <div className={styles.container} >
                     {content.map((item, index) => (
                         <div style={{ display: 'flex', alignItems: 'center' }}
                             key={item.id}
@@ -99,26 +101,17 @@ const FirstAlignerFree = () => {
                     ))}
                 </div>
                 <div className={styles.relative} >
-                    {images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt='image'
-                            style={{
-                                opacity: index === currentImage ? 1 : 0,
-                                transition: 'opacity 1s ease-in-out',
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'contain',
-                            }}
-                            className={fadeIn ? 'fade-in' : ''}
-                        />
-                    ))}
+                    <video
+                        autoPlay
+                        className={styles.viedo}
+                        ref={videoEl}
+                        src="/assets/leoalignVideo.mp4"
+                        type="video/mp4"
+                        loop
+                        muted
+                    />
                 </div>
-            </div> */}
+            </div>
             <div className={styles.scroll} id='about'>
                 <marquee behavior="scroll" direction=""><span className={styles.red} >Try</span> it before you <span className={styles.red} >choose</span> it <span className={styles.red} > Try</span> it before you <span className={styles.red} >choose</span> it<span className={styles.red} >Try </span> it before you <span className={styles.red} >choose</span> it</marquee>
             </div>

@@ -1,4 +1,4 @@
-import React,{useRef, useEffect} from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from '@/styles/Video.module.css'
 import Image from 'next/image'
 import logo from '../../public/assets/logo.png'
@@ -6,18 +6,27 @@ import logo from '../../public/assets/logo.png'
 const VideoSection = () => {
 
     const videoEl = useRef(null);
+    const videoEl2 = useRef(null);
 
-  const attemptPlay = () => {
-    videoEl &&
-      videoEl.current &&
-      videoEl.current.play().catch((error) => {
-        console.error("Error attempting to play", error);
-      });
-  };
+    const attemptPlay = () => {
+        videoEl &&
+            videoEl.current &&
+            videoEl.current.play().catch((error) => {
+                console.error("Error attempting to play", error);
+            });
+    };
+    const attemptPlay2 = () => {
+        videoEl2 &&
+            videoEl2.current &&
+            videoEl2.current.play().catch((error) => {
+                console.error("Error attempting to play", error);
+            });
+    };
 
-  useEffect(() => {
-    attemptPlay();
-  }, []);
+    useEffect(() => {
+        attemptPlay();
+        attemptPlay2();
+    }, []);
 
     const data = [
         {
@@ -61,10 +70,7 @@ const VideoSection = () => {
                     {
                         data.map((item, key) => (
                             <div className={styles.card} key={key}>
-                                {/* <video autoPlay className={styles.viedo} src={item.video}  alt='video' /> */}
-                                {/* <video autoPlay loop className={styles.viedo}>
-                                    <source src={item.video} />
-                                </video> */}
+
                                 <video
                                     autoPlay
                                     className={styles.viedo}
@@ -82,13 +88,33 @@ const VideoSection = () => {
             </div>
             <div className={styles.mainVideo}>
                 <div className={styles.pathTo} style={{ display: 'flex' }}>
-                    <h1>Path to</h1>
+                    <h1>Path to </h1>
                     <Image className={styles.PathLogo} src={logo} alt='logo' />
                 </div>
-                <video className={styles.video} alt='video' src="" />
+                <video
+                    autoPlay
+                    className={styles.largeViedo}
+                    ref={videoEl2}
+                    src="/assets/mainVideo.mp4"
+                    type="video/mp4"
+                    loop
+                    muted
+                />
             </div>
         </div>
     )
 }
 
 export default VideoSection
+
+
+
+//  <video
+// autoPlay
+// className={styles.viedo}
+// ref={videoEl}
+// src='/assets/teethVideos/leoalignVideo.mp4'
+// type="video/mp4"
+// loop
+// muted
+// />

@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import { FaBars, FaTimes, FaUser, FaMapMarkerAlt, FaQuestion, FaEnvelope, FaBook } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMapMarkerAlt, FaQuestion, FaEnvelope, FaBook, FaHeart } from 'react-icons/fa';
+import { BsPeople } from 'react-icons/bs'
+import { IoCallOutline } from 'react-icons/io5'
+import { CiLocationOn, CiCircleQuestion } from 'react-icons/ci'
 import { useState } from 'react';
 import logo from '../../public/assets/logo.png'
+import map from '../../public/assets/map-pin.png'
 import styles from '@/styles/Navbar.module.css';
 import Image from 'next/image';
 
@@ -26,9 +30,9 @@ const Navbar = () => {
                 </button>
                 <ul className={`${styles.nav} ${isOpen ? styles.active : ''}`}>
                     <li className={styles.navItem}>
-                        <Link className={styles.link} onClick={() => setLoc(false)} href="/#about">
+                        <Link className={styles.link} onClick={() => {setLoc(false); setIsOpen(false)}} href="/#about">
                             <div className={styles.navLink}>
-                                <FaUser className={styles.navIcon} />
+                                <BsPeople className={styles.navIcon} />
                                 About Us
                             </div>
                         </Link>
@@ -36,7 +40,7 @@ const Navbar = () => {
                     <li className={styles.navItem}>
                         <div className={styles.link} onClick={() => setLoc(!loc)} >
                             <div className={styles.navLink}>
-                                <FaMapMarkerAlt className={styles.navIcon} />
+                                <CiLocationOn className={styles.navIcon} />
                                 Location
                             </div>
                             <div className={loc ? styles.active : styles.locationList}>
@@ -47,23 +51,23 @@ const Navbar = () => {
                         </div>
                     </li>
                     <li className={styles.navItem}>
-                        <Link className={styles.link} onClick={() => setLoc(false)} href="/FAQ">
+                        <Link className={styles.link} onClick={() => {setLoc(false); setIsOpen(false)}} href="/FAQ">
                             <div className={styles.navLink}>
-                                <FaQuestion className={styles.navIcon} />
+                                <CiCircleQuestion className={styles.navIcon} />
                                 FAQs
                             </div>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link className={styles.link} onClick={() => setLoc(false)} href="/#contact">
+                        <Link className={styles.link} onClick={() => {setLoc(false); setIsOpen(false)}} href="tel:+918951183999">
                             <div className={styles.navLink}>
-                                <FaEnvelope className={styles.navIcon} />
+                                <IoCallOutline className={styles.navIcon} />
                                 Contact
                             </div>
                         </Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link className={styles.link} onClick={() => setLoc(false)} href="/FAQ">
+                        <Link className={styles.link} onClick={() => {setLoc(false); setIsOpen(false)}} href="/#bookNow">
                             <button className={styles.bookScan}>
                                 Book Scan
                             </button>

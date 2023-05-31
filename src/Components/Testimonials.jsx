@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from '@/styles/Testimonials.module.css'
 import Image from 'next/image'
-import person1 from '../../public/assets/testimonialPerson.png'
 import logo from '../../public/assets/logo.png'
 
 
@@ -9,40 +8,40 @@ const Testimonials = () => {
 
     const data = [
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
+            name: 'Sakshi S',
+            designation: 'Infulencer',
+            img: require('../../public/assets/review/testimonialPerson.png'),
             review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
         },
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
-            review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
+            name: 'Prateek Huda',
+            designation: 'Software Engineer',
+            img: require('../../public/assets/review/testimonialPerson2.png'),
+            review: 'My overlapped front teeth were corrected with perfect finishing with in six months of my treatment. My overall confidence levels are raised after I am.'
         },
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
-            review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
+            name: 'Samiksha Rao ',
+            designation: 'Fashion Technology Student',
+            img: require('../../public/assets/review/testimonialPerson3.png'),
+            review: 'I corrected by forwardly placed teeth with Leoalign and I cant be more thankful. They corrected my smile without removing additional teeth and I am utterly happy to be'
         },
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
-            review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
+            name: 'Niharika Goyal',
+            designation: 'Student Of Fine Arts',
+            img: require('../../public/assets/review/testimonialPerson4.png'),
+            review: 'My teeth were irregular and I had speech issues coz of that. Leoalign not only corrected my teeth but improved my speech as well….elated to be'
         },
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
-            review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
+            name: 'Deekshita Gowda',
+            designation: 'Classical Dancer ',
+            img: require('../../public/assets/review/testimonialPerson5.png'),
+            review: 'All my stage fears and inhibitions vanished once my smile got corrected through Leoalign. I evolved like a butterfly and just cant stop smiling….beaming with pride to be'
         },
         {
-            name: 'Name1',
-            designation: 'designation',
-            img: require('../../public/assets/testimonialPerson.png'),
-            review: 'Gap in my front teeth was closed with in three months of treatment with Leoalign. No pain…no trouble and now I am all smiles. I am'
+            name: 'Swagat Sindiri',
+            designation: 'Entrepreneur',
+            img: require('../../public/assets/review/testimonialPerson6.png'),
+            review: 'My upper and lower teeth were placed in a very wrong position and were giving me jaw pain. Leoalign corrected my cross bite and put my teeth in Ideal position. I am sure to say I got saved by getting'
         },
 
 
@@ -74,14 +73,14 @@ const Testimonials = () => {
     return (
         <div className={styles.sectionWrap}>
             <div className={styles.head}>
-                <div style={{ display: 'flex' }} ><h1 style={{ color: 'var(--secondary-color)' }}>I </h1><Image className={styles.logo} src={logo} alt="logo" /> <h1>Smiles</h1></div>
+                <div className={styles.title}><h1 style={{ color: 'var(--secondary-color)' }}></h1><Image className={styles.logo} src={logo} alt="logo" /> <h1>Smiles</h1></div>
                 <p>Stories to share…smile victories to cherish……our LEOALIGNED patients….</p>
             </div>
             <div className={styles.cards}>
                 {
                     data.map((item, key) => (
                         <div className={styles.cardWrap} key={key}>
-                            <Image className={styles.img} src={person1} alt='Person' />
+                            <Image className={styles.img} src={item.img} alt='Person' />
                             <div className={styles.name}>{item.name}</div>
                             <div className={styles.designation}>{item.designation}</div>
                             <div className={styles.review}>
