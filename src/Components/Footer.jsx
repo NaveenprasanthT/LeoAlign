@@ -4,8 +4,7 @@ import Image from 'next/image'
 import logo from '../../public/assets/logo.png'
 import IG from '../../public/assets/IG.png'
 import fb from '../../public/assets/facebook.png'
-import linkedIN from '../../public/assets/LinkedIN.png'
-import { Link } from 'react-scroll'
+
 
 
 const Footer = () => {
