@@ -21,6 +21,7 @@ function HeroSection() {
         });
         alert("Data collected, we will get back to soon..!")
         setSending(false);
+        setNumber('')
       } catch (e) {
       }
     }
