@@ -54,7 +54,7 @@ const Accordion = ({ items }) => {
             {item.title} <AiOutlineDown />
           </AccordionItem>
           <AccordionContent  isOpen={activeIndex === index}>
-            {item.content}{index}
+            {item.content}
           </AccordionContent>
         </div>
       ))}
