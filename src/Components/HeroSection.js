@@ -19,7 +19,7 @@ function HeroSection() {
           loc: '',
           msg: '',
         });
-        alert("Data collected, we will get back to soon..!")
+        alert("Data collected, we will get back to you soon..!")
         setSending(false);
         setNumber('')
       } catch (e) {
