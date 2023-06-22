@@ -4,6 +4,7 @@ import Image from 'next/image'
 import logo from '../../public/assets/logo.png'
 import IG from '../../public/assets/IG.png'
 import fb from '../../public/assets/facebook.png'
+import Link from 'next/link'
 
 
 
@@ -19,7 +20,7 @@ const Footer = () => {
                     <p> | All Rights Reserved.</p>
                 </div>
                 <div className={styles.termsCondition}>
-                    <p>Privacy Policy  |  Terms and Conditions</p>
+                    <p><Link style={{textDecoration: 'none', color: '#000'}} href='/Privacy-Policy'> Privacy Policy</Link>  | <Link style={{textDecoration: 'none', color: '#000'}} href='/Terms-and-Condition'> Terms and Conditions</Link></p>
                 </div>
             </div>
             <div className={styles.socialIcons}>
