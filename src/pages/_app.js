@@ -40,11 +40,9 @@ export default function App({ Component, pageProps }) {
           `,
         }}
       />
-      <body>
-        <script type="text/javascript" id="zsiqchat" dangerouslySetInnerHTML={{
-          __html: `var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "191a01f82c6b91face6c6a1743caca14500873f76812a96ee4d481f4f2073cb6", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`
-        }} />
-      </body>
+      <Script type="text/javascript" id="zsiqchat" dangerouslySetInnerHTML={{
+        __html: `var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "191a01f82c6b91face6c6a1743caca14500873f76812a96ee4d481f4f2073cb6", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`
+      }} />
       <Navbar />
       <Component {...pageProps} />
       <Footer />
