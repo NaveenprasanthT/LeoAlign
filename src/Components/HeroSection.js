@@ -14,30 +14,15 @@ function HeroSection() {
       title: 'Only Phone Number',
       number: number
     }
-    emailjs.send('service_s1cxqme','template_r70646i',formData,'eqE16NGcWEsR7KlX7')
-        .then(() => {
-            console.log('Email sent successfully!');
-        })
-        .catch((error) => {
-            console.error('Error sending email:', error);
-        });
-    //add data to collection
-    const addData = async () => {
-      try {
-        const docRef = await addDoc(collection(db, "users"), {
-          name: '',
-          phoneNo: number,
-          email: '',
-          loc: '',
-          msg: '',
-        });
-        alert("Data collected, we will get back to you soon..!")
-        setSending(false);
-        setNumber('')
-      } catch (e) {
-      }
-    }
-    addData();
+    emailjs.send('service_s1cxqme', 'template_r70646i', formData, 'eqE16NGcWEsR7KlX7')
+            .then(() => {
+                console.log('Email sent successfully!');
+                setSending(false);
+                setNumber('')
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+            })
   }
 
   return (

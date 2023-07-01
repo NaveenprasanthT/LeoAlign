@@ -26,36 +26,19 @@ const Form = () => {
             location: location,
             msg: msg,
         }
-        emailjs.send('service_s1cxqme','template_r70646i',formData,'eqE16NGcWEsR7KlX7')
-        .then(() => {
-            console.log('Email sent successfully!');
-        })
-        .catch((error) => {
-            console.error('Error sending email:', error);
-        });
-        //add data to collection
-        const addData = async () => {
-            try {
-                const docRef = await addDoc(collection(db, "users"), {
-                    name: name,
-                    phoneNo: number,
-                    email: email,
-                    loc: location,
-                    msg: msg,
-                });
-                alert("Data collected, we will get back to you soon..!")
+        emailjs.send('service_s1cxqme', 'template_r70646i', formData, 'eqE16NGcWEsR7KlX7')
+            .then(() => {
+                console.log('Email sent successfully!');
                 setSending(false);
                 setName('')
                 setNumber('')
                 setEmail('')
                 setLocation('')
                 setMsg('')
-
-            } catch (e) {
-                console.log(e)
-            }
-        }
-        addData();
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+            })
     }
 
 
