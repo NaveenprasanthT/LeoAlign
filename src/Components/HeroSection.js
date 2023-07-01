@@ -2,6 +2,7 @@ import styles from '@/styles/Home.module.css';
 import { db } from '../../src/firebase'
 import { collection, addDoc } from 'firebase/firestore';
 import { useState } from 'react';
+import emailjs from 'emailjs-com'
 
 function HeroSection() {
   const [number, setNumber] = useState('')
@@ -9,6 +10,17 @@ function HeroSection() {
 
   const handleNoSubmit = (e) => {
     e.preventDefault();
+    const formData = {
+      title: 'Only Phone Number',
+      number: number
+    }
+    emailjs.send('service_s1cxqme','template_r70646i',formData,'eqE16NGcWEsR7KlX7')
+        .then(() => {
+            console.log('Email sent successfully!');
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+        });
     //add data to collection
     const addData = async () => {
       try {
