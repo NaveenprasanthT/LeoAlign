@@ -19,6 +19,7 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSending(true);
         const formData = {
             name: name,
             number: number,

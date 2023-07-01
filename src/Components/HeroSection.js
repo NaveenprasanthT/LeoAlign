@@ -10,6 +10,7 @@ function HeroSection() {
 
   const handleNoSubmit = (e) => {
     e.preventDefault();
+    setSending(true);
     const formData = {
       title: 'Only Phone Number',
       number: number
@@ -35,7 +36,7 @@ function HeroSection() {
             <div className={styles.code} htmlFor="">+ 91</div>
             <input onChange={(e) => setNumber(e.target.value)} value={number} type="tel" id="phoneNumber" name="phoneNumber" required />
           </div>
-          <input type='submit' className={styles.bookScan} value={sending ? 'sending' : 'Book Scan'} />
+          <input type='submit' className={styles.bookScan} value={sending ? 'Sending' : 'Book Scan'} />
         </form>
       </div>
     </div>
