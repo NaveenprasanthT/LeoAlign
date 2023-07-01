@@ -6,6 +6,7 @@ import call from '../../public/assets/call.png'
 import img from '../../public/assets/faqForm.png'
 import { db } from '../../src/firebase'
 import { collection, addDoc } from 'firebase/firestore';
+import emailjs from 'emailjs-com'
 
 const Form = () => {
     const [name, setName] = useState('')
@@ -18,6 +19,20 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = {
+            name: name,
+            number: number,
+            email: email,
+            location: location,
+            msg: msg,
+        }
+        emailjs.send('service_s1cxqme','template_r70646i',formData,'eqE16NGcWEsR7KlX7')
+        .then(() => {
+            console.log('Email sent successfully!');
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+        });
         //add data to collection
         const addData = async () => {
             try {
@@ -37,6 +52,7 @@ const Form = () => {
                 setMsg('')
 
             } catch (e) {
+                console.log(e)
             }
         }
         addData();
@@ -70,7 +86,7 @@ const Form = () => {
                     </div>
                     <div className={styles.formBottom}>
                         <label htmlFor="msg">WHAT ARE YOU LOOKING FOR?</label>
-                        <input onChange={(e) => setMsg(e.target.value)} value={msg} autoComplete='message' id='msg' type="text" placeholder='ENter your messages...' />
+                        <input onChange={(e) => setMsg(e.target.value)} value={msg} autoComplete='message' id='msg' type="text" placeholder='Enter your messages...' />
                     </div>
                 </div>
             </div>
